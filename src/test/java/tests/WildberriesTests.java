@@ -34,7 +34,7 @@ public class WildberriesTests extends TestBase {
     @Severity(NORMAL)
     void checkEmptyBasketTest() {
         mainPage.openPage();
-        basketPage.enterBasket();
+        basketPage.movingToBasketPage();
         basketPage.checkBasketTitle("В корзине пока пусто");
     }
 

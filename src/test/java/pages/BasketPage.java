@@ -23,7 +23,7 @@ public class BasketPage {
 
     @Step("переход на страницу Корзины")
     public BasketPage movingToBasketPage() {
-        basketIcon.click();
+        basketIcon.click();  //basketIcon.click();
         return this;
     }
 
@@ -39,11 +39,6 @@ public class BasketPage {
         return this;
     }
 
-    @Step("перейти в Корзину")
-    public BasketPage enterBasket() {
-        basketIcon.click();
-        return this;
-    }
 
     @Step("проверка Заголовка пустой корзины")
     public BasketPage checkBasketTitle(String value) {

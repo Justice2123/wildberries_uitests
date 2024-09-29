@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MainPage {
     private final SelenideElement
         searchInput = $("#searchInput"),
-        productCartList = $(".product-card-list",0),
+        productCartList = $(".product-card-list article",0),
         headerAfterRequestSearchInput = $(".searching-results__title"),
         loginIcon = $(".j-main-login"),
         jobButton = $(".simple-menu__link--employment"),
@@ -28,6 +28,7 @@ public class MainPage {
     @Step("open page")
     public void openPage() {
         open("");
+        sleep(3000);
     }
 
     @Step("переход на страницу Авторизации")

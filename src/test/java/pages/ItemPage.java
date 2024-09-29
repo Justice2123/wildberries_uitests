@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ItemPage {
     private final SelenideElement
-        orderForFixedButton = $(".order__for-fixed",1),
+        orderForFixedButton = $(".order__for-fixed",1), //изменено с 1
         headerSizesItemWindow = $(".popup__header"),
         articleNumber = $(".product-params__table");
 
