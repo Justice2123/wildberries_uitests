@@ -28,7 +28,7 @@ public class MainPage {
     @Step("open page")
     public void openPage() {
         open("");
-        sleep(3000);
+        sleep(5000);
     }
 
     @Step("переход на страницу Авторизации")
