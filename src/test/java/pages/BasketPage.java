@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BasketPage {
     private final SelenideElement
-        basketTitle = $(".basket-empty__title"),
-        countPlus = $(".count__plus"),
-        numberOnBasket = $(".navbar-pc__notify"),
-        basketIcon = $(".j-item-basket"),
-        priceInBasketSection = $(".b-top__count");
+            basketTitle = $(".basket-empty__title"),
+            countPlus = $(".count__plus"),
+            numberOnBasket = $(".navbar-pc__notify"),
+            basketIcon = $(".j-item-basket"),
+            priceInBasketSection = $(".b-top__count");
 
 
     @Step("проверка отображения количества товара на картинке Корзины")

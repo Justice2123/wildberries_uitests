@@ -59,38 +59,38 @@ gradle clean wildberriesTest
 gradle clean test -Denv=wildberriesTest
 ```
 
-### <img src="media/logo/Jenkins.svg" width="30" height="30" title="Jenkins"> Сборка в Jenkins
+### <img src="media/logo/Jenkins.svg" width="30" height="30" title="Jenkins"> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/"> Jenkins </a>
 
 <p align="center">
-<img title="Jenkins Build" src="media/scr/jenkins.png">
+<a target="_blank" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/"><img title="Jenkins Build" src="media/scr/jenkins.png"></a>
 </p>
 
-### <img src="media/logo/Allure_Report.svg" title="Allure Report" width="30" heigth="30"/> Пример Allure-отчета
+### <img src="media/logo/Allure_Report.svg" title="Allure Report" width="30" heigth="30"/> Пример <a target="allure_report" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/10/allure/"> Allure-отчета </a>
 ___
 #### Overview
 
 <p align="center">
-<img title="Allure Overview" src="media/scr/allure_report.png">
+<a href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/10/allure/"><img title="Allure Overview" src="media/scr/allure_report.png"></a>
 </p>
 
 #### Результат выполнения теста
 
 <p align="center">
-<img title="Test Results in Alure" src="media/scr/test_results.png">
+<a target="_blank" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/10/allure/#suites/3e3271e214287bade4074a3eb3dae433"><img title="Test Results in Alure" src="media/scr/test_results.png"></a>
 </p>
 
-#### <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="30"/> Интеграция с Allure TestOps
+#### <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="30"/> Интеграция с <a title="_allure_testOps" href="https://allure.autotests.cloud/launch/42408/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0">Allure TestOps</a>
 ___
 
 <p align="center">
-<img title="Allure Overview" src="media/scr/allure_testOps.png">
+<a target="_blank" href="https://allure.autotests.cloud/launch/42408/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0"><img title="Allure Overview" src="media/scr/allure_testOps.png"></a>
 </p>
 
-#### <img src="media/logo/jira.svg" title="Jira" width="4%"/> Интеграция с Jira
+#### <img src="media/logo/jira.svg" title="Jira" width="4%"/> Интеграция с <a title="jira" href="https://jira.autotests.cloud/browse/HOMEWORK-1356">Jira</a>
 ___
 
 <p align="center">
-<img title="Allure Overview" src="media/scr/jira.png">
+<a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1356"><img title="Allure Overview" src="media/scr/jira.png"></a>
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота

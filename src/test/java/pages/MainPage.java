@@ -15,17 +15,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainPage {
     private final SelenideElement
-        searchInput = $("#searchInput"),
-        productCartList = $(".product-card-list article",0),
-        headerAfterRequestSearchInput = $(".searching-results__title"),
-        loginIcon = $(".j-main-login"),
-        jobButton = $(".simple-menu__link--employment"),
-        jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
+            searchInput = $("#searchInput"),
+            productCartList = $(".product-card-list article", 0),
+            headerAfterRequestSearchInput = $(".searching-results__title"),
+            loginIcon = $(".j-main-login"),
+            jobButton = $(".simple-menu__link--employment"),
+            jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
 
     private final ElementsCollection
-        navMenuItems = $$x("//div[@id='basketContent']/div/a");
+            navMenuItems = $$x("//div[@id='basketContent']/div/a");
 
-    @Step("open page")
+    @Step("открытие главной страницы")
     public void openPage() {
         open("");
         sleep(5000);
@@ -44,18 +44,18 @@ public class MainPage {
     }
 
     @Step("проверка Заголовка {value}")
-    public MainPage cheakHeaderSearchInput(String value) {
+    public MainPage checkHeaderSearchInput(String value) {
         headerAfterRequestSearchInput.shouldHave(text(value));
         return this;
     }
 
     @Step("выбор первого товара")
-    public  MainPage chooseFirstItem() {
+    public MainPage chooseFirstItem() {
         productCartList.click();
         return this;
     }
 
-    @Step("Переход на страницу 'Работа в Wildberries'")
+    @Step("переход на страницу 'Работа в Wildberries'")
     public MainPage jobPage() {
         jobPageButton.click();
         return this;
@@ -67,23 +67,17 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверка url")
+    @Step("проверка url")
     public MainPage checkUrl(String value) {
         webdriver().shouldHave(currentFrameUrl(value));
         return this;
     }
 
-    @Step("Проверка корректного отображения пунктов меню на главной странице")
+    @Step("проверка корректного отображения пунктов меню на главной странице")
     public MainPage checkNavMenuItems(List<String> items) {
         for (int i = 0; i < items.size(); i++) {
             assertEquals(items.get(i), navMenuItems.get(i).text());
         }
         return this;
     }
-
-
-
-
-
-
 }

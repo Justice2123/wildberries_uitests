@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ItemPage {
     private final SelenideElement
-        orderForFixedButton = $(".order__for-fixed",1), //изменено с 1
-        headerSizesItemWindow = $(".popup__header"),
-        articleNumber = $(".product-params__table");
+            orderForFixedButton = $(".order__for-fixed", 1),
+            headerSizesItemWindow = $(".popup__header"),
+            articleNumber = $(".product-params__table");
 
     @Step("добавление товара в корзину")
     public ItemPage addedItemToBasket() {

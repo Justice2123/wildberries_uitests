@@ -9,17 +9,17 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class AuthorizationPage {
     private final SelenideElement
-         loginButton = $("#requestCode"),
-         errorPhone = $(".j-error-full-phone"),
-         phoneInput = $(".input-item"),
-         formMobileCodes = $(".form-block__dropdown"),
-         menuMobileCode = $(".drop-select", 4),
-         mobileCode = $(".form-block__mask"),
-         loginTitle = $(".sign-in-page__title");
+            loginButton = $("#requestCode"),
+            errorPhone = $(".j-error-full-phone"),
+            phoneInput = $(".input-item"),
+            formMobileCodes = $(".form-block__dropdown"),
+            menuMobileCode = $(".drop-select", 4),
+            mobileCode = $(".form-block__mask"),
+            loginTitle = $(".sign-in-page__title");
 
     @Step("ввод некорректного номера телефона")
     public AuthorizationPage setUnsuccessfulPhone(String value) {
-        phoneInput.setValue("7777");
+        phoneInput.setValue(value);
         return this;
     }
 

@@ -21,7 +21,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 public class WildberriesTests extends TestBase {
 
 
-    private List<String>
+    private final List<String>
             navMenuItemsText = List.of("Адреса", "Войти", "Корзина");
 
     BasketPage basketPage = new BasketPage();
@@ -100,10 +100,10 @@ public class WildberriesTests extends TestBase {
     @Test
     @DisplayName("добавление товара в корзину, проверка увелечения количества товара, проверка отображения кол-ва")
     @Severity(NORMAL)
-     void addedItemAndCheckQuantityOnBasketItem() {
+    void addedItemAndCheckQuantityOnBasketItem() {
         mainPage.openPage();
         mainPage.requestInSearchInput("Успокоительное");
-        mainPage.cheakHeaderSearchInput("Успокоительное");
+        mainPage.checkHeaderSearchInput("Успокоительное");
         mainPage.chooseFirstItem();
         itemPage.addedItemToBasket();
         basketPage.checkNumberOnBasketIcon("1");
@@ -116,12 +116,11 @@ public class WildberriesTests extends TestBase {
     @Test
     @DisplayName("неудачная попытка авторизации с коротким номером")
     @Severity(NORMAL)
-     void checkIncorrectPhoneNumberAuthorisation() {
+    void checkIncorrectPhoneNumberAuthorisation() {
         mainPage.openPage();
         mainPage.movingLoginPage();
         authorizationPage.setUnsuccessfulPhone("7777");
         authorizationPage.pushedLoginButton();
         authorizationPage.checkErrorMessage("Некорректный формат номера");
-
     }
 }
