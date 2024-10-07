@@ -8,10 +8,10 @@ repositories {
 }
 
 def allureVersion = "2.27.0",
-    selenideVersion = "7.2.3",
-    junitJupiterVersion = "5.10.2",
-    ownerVersion = "1.0.4",
-    slf4jVersion = "2.0.7"
+    selenideVersion = "7.5.1",
+    junitJupiterVersion = "5.10.5",
+    ownerVersion = "1.0.12",
+    slf4jVersion = "2.0.16"
 
 allure {
     report {
@@ -57,9 +57,11 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-task wildberriesTests(type: Test) {
+tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags("wildberriesTests")
+        if (System.getProperty("type") != null && !System.getProperty("type").isEmpty()) {
+            includeTags System.getProperty("type")
+        }
     }
 }

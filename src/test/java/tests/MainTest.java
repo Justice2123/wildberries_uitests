@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Severity;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
@@ -9,14 +10,16 @@ import java.util.List;
 
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
-public class MainTest extends TestBase{
+@Tag("mainTests")
+public class MainTest extends TestBase {
+
     MainPage mainPage = new MainPage();
 
     private final List<String>
             navMenuItemsText = List.of("Адреса", "Войти", "Корзина");
 
     @Test
-    @DisplayName("проверка текста header menu")
+    @DisplayName("проверка текста меню на главной странице")
     @Severity(NORMAL)
     void checkHeadersUrls() {
         mainPage.openPage();
@@ -36,7 +39,7 @@ public class MainTest extends TestBase{
     @Severity(NORMAL)
     void checkUrlWorkPageTest() {
         mainPage.openPage();
-        mainPage.jobPage();
+        mainPage.clickOnButtonJob();
         mainPage.checkUrl("https://www.wildberries.ru/services/trudoustroystvo");
     }
 }

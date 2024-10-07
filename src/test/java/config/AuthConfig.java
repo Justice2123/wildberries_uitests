@@ -6,6 +6,6 @@ import org.aeonbits.owner.Config;
         "classpath:auth.properties"
 })
 
-public interface AuthConfig extends Config{
+public interface AuthConfig extends Config {
     String remoteUrl();
 }

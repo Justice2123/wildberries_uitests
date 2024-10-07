@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainPage {
     private final SelenideElement
@@ -33,13 +32,13 @@ public class MainPage {
     }
 
     @Step("переход на страницу Авторизации")
-    public MainPage moveLoginPage() {
+    public MainPage clickLoginIcon() {
         loginIcon.click();
         return this;
     }
 
     @Step("проверка загрузки банера")
-    public MainPage bannerShouldBeVisible() {
+    public MainPage checkMainBanner() {
         mainPageBanner.shouldBe(visible);
         return this;
     }
@@ -63,7 +62,7 @@ public class MainPage {
     }
 
     @Step("переход на страницу 'Работа в Wildberries'")
-    public MainPage jobPage() {
+    public MainPage clickOnButtonJob() {
         jobPageButton.click();
         return this;
     }
@@ -75,24 +74,14 @@ public class MainPage {
     }
 
     @Step("проверка url")
-    public MainPage checkUrl(String value) {
+    public void checkUrl(String value) {
         webdriver().shouldHave(currentFrameUrl(value));
-        return this;
     }
-
-//    @Step("проверка корректного отображения пунктов меню на главной странице")
-//    public MainPage checkNavMenuItems(List<String> items) {
-//        for (int i = 0; i < items.size(); i++) {
-//            assertEquals(items.get(i), navMenuItems.get(i).text());
-//        }
-//        return this;
-//    }
 
     @Step("проверка корректного отображения пунктов меню на главной странице")
-    public MainPage checkNavMenuItems(List<String> array) {
-         navMenuItems.should(containExactTextsCaseSensitive(array));
+    public MainPage checkNavMenuItems(List<String> items) {
+        navMenuItems.should(containExactTextsCaseSensitive(items));
         return this;
     }
-
 }
 
