@@ -8,8 +8,8 @@ repositories {
 }
 
 def allureVersion = "2.27.0",
-    selenideVersion = "7.5.1",
-    junitJupiterVersion = "5.10.5",
+    selenideVersion = "7.2.3",
+    junitJupiterVersion = "5.10.2",
     ownerVersion = "1.0.12",
     slf4jVersion = "2.0.16"
 
