@@ -20,7 +20,7 @@ public class MainPage {
             headerAfterRequestSearchInput = $(".searching-results__title"),
             loginIcon = $(".j-main-login"),
             jobButton = $(".simple-menu__link--employment"),
-            mainPageBanner = $(".main-page__banner-info"),
+            mainPageBanner = $(".swiper-container"),
             jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
 
     private final ElementsCollection
