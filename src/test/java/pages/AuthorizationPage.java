@@ -18,13 +18,13 @@ public class AuthorizationPage {
             loginTitle = $(".sign-in-page__title");
 
     @Step("ввод некорректного номера телефона")
-    public AuthorizationPage setUnsuccessfulPhone(String value) {
+    public AuthorizationPage setPhone(String value) {
         phoneInput.setValue(value);
         return this;
     }
 
     @Step("нажатие на кнопку Отправить код")
-    public AuthorizationPage pushedLoginButton() {
+    public AuthorizationPage clickLoginButton() {
         loginButton.click();
         return this;
     }
@@ -35,7 +35,7 @@ public class AuthorizationPage {
         return this;
     }
 
-    @Step("Проверка заголовка окна авторизации")
+    @Step("проверка заголовка окна авторизации")
     public AuthorizationPage checkLoginTitle(String value) {
         loginTitle.shouldHave(text(value));
         return this;
@@ -48,7 +48,7 @@ public class AuthorizationPage {
     }
 
     @Step("выбор кода")
-    public AuthorizationPage choosingMobileCode(String value) {
+    public AuthorizationPage chooseMobileCode(String value) {
         menuMobileCode.find(byText(value)).click();
         return this;
     }

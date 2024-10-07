@@ -3,8 +3,11 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.AuthConfig;
 import helpers.Attachments;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.Config;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,14 +19,13 @@ public class TestBase {
 
     @BeforeAll
     static void setUpBefore() {
-
+        AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
         Configuration.baseUrl = System.getProperty("baseUrl", "https://www.wildberries.ru/");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
         Configuration.pageLoadStrategy = "eager";
-//        Configuration.remote = "https://user1:1234@" + System.getProperty(
-//                "remoteUrl", "selenoid.autotests.cloud") + "/wd/hub";
+        Configuration.remote = System.getProperty("remoteUrl", authConfig.remoteUrl());
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,

@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 
 import java.util.List;
 
+import static com.codeborne.selenide.CollectionCondition.containExactTextsCaseSensitive;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byTagAndText;
@@ -20,6 +21,7 @@ public class MainPage {
             headerAfterRequestSearchInput = $(".searching-results__title"),
             loginIcon = $(".j-main-login"),
             jobButton = $(".simple-menu__link--employment"),
+            mainPageBanner = $(".main-page__banner-info"),
             jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
 
     private final ElementsCollection
@@ -28,12 +30,17 @@ public class MainPage {
     @Step("открытие главной страницы")
     public void openPage() {
         open("");
-        sleep(5000);
     }
 
     @Step("переход на страницу Авторизации")
-    public MainPage movingLoginPage() {
+    public MainPage moveLoginPage() {
         loginIcon.click();
+        return this;
+    }
+
+    @Step("проверка загрузки банера")
+    public MainPage bannerShouldBeVisible() {
+        mainPageBanner.shouldBe(visible);
         return this;
     }
 
@@ -73,11 +80,19 @@ public class MainPage {
         return this;
     }
 
+//    @Step("проверка корректного отображения пунктов меню на главной странице")
+//    public MainPage checkNavMenuItems(List<String> items) {
+//        for (int i = 0; i < items.size(); i++) {
+//            assertEquals(items.get(i), navMenuItems.get(i).text());
+//        }
+//        return this;
+//    }
+
     @Step("проверка корректного отображения пунктов меню на главной странице")
-    public MainPage checkNavMenuItems(List<String> items) {
-        for (int i = 0; i < items.size(); i++) {
-            assertEquals(items.get(i), navMenuItems.get(i).text());
-        }
+    public MainPage checkNavMenuItems(List<String> array) {
+         navMenuItems.should(containExactTextsCaseSensitive(array));
         return this;
     }
+
 }
+

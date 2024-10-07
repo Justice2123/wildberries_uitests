@@ -13,7 +13,7 @@ public class ItemPage {
             articleNumber = $(".product-params__table");
 
     @Step("добавление товара в корзину")
-    public ItemPage addedItemToBasket() {
+    public ItemPage addItemToBasket() {
         orderForFixedButton.click();
         return this;
     }

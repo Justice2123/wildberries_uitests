@@ -14,7 +14,6 @@ public class BasketPage {
             basketIcon = $(".j-item-basket"),
             priceInBasketSection = $(".b-top__count");
 
-
     @Step("проверка отображения количества товара на картинке Корзины")
     public BasketPage checkNumberOnBasketIcon(String value) {
         numberOnBasket.shouldHave(text(value));
@@ -22,23 +21,22 @@ public class BasketPage {
     }
 
     @Step("переход на страницу Корзины")
-    public BasketPage movingToBasketPage() {
-        basketIcon.click();  //basketIcon.click();
+    public BasketPage moveToBasketPage() {
+        basketIcon.click();
         return this;
     }
 
     @Step("увеличение количества товара в корзине")
-    public BasketPage countingPlusItem() {
+    public BasketPage countPlusItem() {
         countPlus.click();
         return this;
     }
 
-    @Step("проверка цены в секции заказа")
-    public BasketPage checkPriceInBasketSection() {
-        priceInBasketSection.shouldHave(text("Товары, 2 шт."));
+    @Step("проверка количества товара в секции заказа")
+    public BasketPage checkAmountInBasketSection(String value) {
+        priceInBasketSection.shouldHave(text(value));
         return this;
     }
-
 
     @Step("проверка Заголовка пустой корзины")
     public BasketPage checkBasketTitle(String value) {
