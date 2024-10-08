@@ -10,6 +10,7 @@ import pages.MainPage;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Tag("itemTests")
+@Tag("wildberriesTests")
 public class ItemTest extends TestBase {
 
     MainPage mainPage = new MainPage();

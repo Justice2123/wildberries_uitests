@@ -11,6 +11,7 @@ import java.util.List;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Tag("mainTests")
+@Tag("wildberriesTests")
 public class MainTest extends TestBase {
 
     MainPage mainPage = new MainPage();

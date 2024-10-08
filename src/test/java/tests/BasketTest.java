@@ -11,6 +11,7 @@ import pages.MainPage;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Tag("basketTests")
+@Tag("wildberriesTests")
 public class BasketTest extends TestBase {
     BasketPage basketPage = new BasketPage();
     MainPage mainPage = new MainPage();
