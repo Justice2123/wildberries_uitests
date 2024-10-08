@@ -41,5 +41,4 @@ public class BasketTest extends TestBase {
         basketPage.checkAmountInBasketSection("Товары, 2 шт.");
         basketPage.checkNumberOnBasketIcon("2");
     }
-
 }
