@@ -20,7 +20,7 @@ public class MainPage {
             headerAfterRequestSearchInput = $(".searching-results__title"),
             loginIcon = $(".j-main-login"),
             jobButton = $(".simple-menu__link--employment"),
-            mainPage = $(".product-card-list article", 0),
+            mainContainer = $("#app"),
             jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
     private final ElementsCollection
             navMenuItems = $$x("//div[@id='basketContent']/div/a");
@@ -37,8 +37,8 @@ public class MainPage {
     }
 
     @Step("проверка загрузки банера")
-    public MainPage checkMainBanner() {
-        mainPage.shouldBe(visible);
+    public MainPage checkMainContainer() {
+        mainContainer.shouldBe(visible);
         return this;
     }
 

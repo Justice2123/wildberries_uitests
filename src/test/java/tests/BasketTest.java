@@ -30,7 +30,7 @@ public class BasketTest extends TestBase {
     @Severity(NORMAL)
     void addItemAndCheckQuantityOnBasketItem() {
         mainPage.openPage();
-        mainPage.checkMainBanner();
+        mainPage.checkMainContainer();
         mainPage.requestInSearchInput("Успокоительное");
         mainPage.checkHeaderSearchInput("Успокоительное");
         mainPage.chooseFirstItem();
