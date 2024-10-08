@@ -20,7 +20,6 @@ public class MainPage {
             headerAfterRequestSearchInput = $(".searching-results__title"),
             loginIcon = $(".j-main-login"),
             jobButton = $(".simple-menu__link--employment"),
-            mainContainer = $(".main-page"),
             jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
     private final ElementsCollection
             navMenuItems = $$x("//div[@id='basketContent']/div/a");
@@ -28,17 +27,12 @@ public class MainPage {
     @Step("открытие главной страницы")
     public void openPage() {
         open("");
+        sleep(5000);
     }
 
     @Step("переход на страницу Авторизации")
     public MainPage clickLoginIcon() {
         loginIcon.click();
-        return this;
-    }
-
-    @Step("ожидание загрузки страницы")
-    public MainPage expectLoadingPage() {
-        sleep(5000);
         return this;
     }
 
