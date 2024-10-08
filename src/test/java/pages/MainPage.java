@@ -20,9 +20,8 @@ public class MainPage {
             headerAfterRequestSearchInput = $(".searching-results__title"),
             loginIcon = $(".j-main-login"),
             jobButton = $(".simple-menu__link--employment"),
-            mainPage = $(".main-page"),
+            mainPage = $(".main"),
             jobPageButton = $(byTagAndText("a", "Работа в Wildberries"));
-
     private final ElementsCollection
             navMenuItems = $$x("//div[@id='basketContent']/div/a");
 
