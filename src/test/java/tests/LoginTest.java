@@ -11,6 +11,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Tag("loginTests")
 public class LoginTest extends TestBase {
+
     MainPage mainPage = new MainPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
