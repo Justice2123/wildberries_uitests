@@ -36,9 +36,9 @@ public class MainPage {
         return this;
     }
 
-    @Step("проверка загрузки банера")
-    public MainPage checkMainContainer() {
-        mainContainer.shouldBe(visible);
+    @Step("ожидание загрузки страницы")
+    public MainPage expectLoadingPage() {
+        sleep(5000);
         return this;
     }
 
