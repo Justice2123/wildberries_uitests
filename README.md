@@ -65,7 +65,7 @@ gradle  clean test -Dtype=wildberiesTests
 <a target="_blank" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/"><img title="Jenkins Build" src="media/scr/jenkins.png"></a>
 </p>
 
-### <img src="media/logo/Allure_Report.svg" title="Allure Report" width="30" heigth="30"/> Пример <a target="allure_report" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/10/allure/"> Allure-отчета </a>
+### <img src="media/logo/Allure_Report.svg" title="Allure Report" width="30" heigth="30"/> Пример <a target="allure_report" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/allure/"> Allure-отчета </a>
 ___
 #### Overview
 
@@ -76,7 +76,7 @@ ___
 #### Результат выполнения теста
 
 <p align="center">
-<a target="_blank" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/10/allure/#suites/3e3271e214287bade4074a3eb3dae433"><img title="Test Results in Alure" src="media/scr/test_results.png"></a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/wildberries_ui_tests/allure/#suites/3e3271e214287bade4074a3eb3dae433"><img title="Test Results in Alure" src="media/scr/allureSuites.png"></a>
 </p>
 
 #### <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="30"/> Интеграция с <a title="_allure_testOps" href="https://allure.autotests.cloud/launch/42408/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0">Allure TestOps</a>
