@@ -21,7 +21,7 @@ public class ItemTest extends TestBase {
     @Severity(NORMAL)
     void checkModalWindowWithSizesIfNoGoods() {
         mainPage.openPage();
-        mainPage.expectLoadingContainer();
+        mainPage.checkMainContainer();
         mainPage.requestInSearchInput("163571936");
         itemPage.checkArticleNumber("163571936");
         itemPage.checkTextButton("В избранное");

@@ -48,7 +48,7 @@ ___
 ### :arrow_forward: Запуск тестов из терминала
 
 ```
-gradle clean wildberriesTest
+gradle clean test
 ```
 
 При выполнении команды, тесты запустятся удаленно в <code>Selenoid</code>.
@@ -56,7 +56,7 @@ gradle clean wildberriesTest
 Удаленный запуск с использованием Jenkins+Selinoid
 
 ```
-gradle clean test -Denv=wildberriesTest
+gradle  clean test -Dtype=wildberiesTests
 ```
 
 ### <img src="media/logo/Jenkins.svg" width="30" height="30" title="Jenkins"> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/"> Jenkins </a>

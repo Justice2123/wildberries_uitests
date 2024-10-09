@@ -28,11 +28,10 @@ public class MainPage {
     @Step("открытие главной страницы")
     public void openPage() {
         open("");
-        //sleep(5000);
     }
 
-    @Step("ожидание загрузки главной страницы")
-    public MainPage expectLoadingContainer() {
+    @Step("проверка загрузки главной страницы")
+    public MainPage checkMainContainer() {
         mainContainer.shouldBe(visible);
         return this;
     }
